@@ -1,0 +1,59 @@
+<template name="main">
+
+
+   
+ <nav>
+
+         
+    <div class="nav-wrapper red">
+      <a href="#!" class="brand-logo">Get Fast</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+      
+ 
+      
+      <ul class="hide-on-med-and-down">
+         <div class="youtube">
+             <div class="right">
+                 <li><a href="{{pathFor route="home"}}">Home</a></li>
+                 <p></p>
+                 <li><a href="{{pathFor route="work"}}">Work</a></li>
+                 <p></p>
+                  <li><a href="{{pathFor route="location"}}">Location</a></li>
+                  <p></p>
+                  <li><a href="{{pathFor route="contact"}}">Contact</a></li>
+    
+             </div>
+         </div>   
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="{{pathFor route = "home"}}">Home</a></li>
+        <li><a href="{{pathFor route = "work"}}">Work</a></li>
+        <li><a href="{{pathFor route = "location"}}">Location</a></li>
+        <li><a href="{{pathFor route = "contact"}}">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  
+
+<div class="contentcard hoverable">
+  {{#transition wrap="true" in="fadeIn:500" out="fadeOut:500"}}
+{{> yield }}
+ {{/transition}}
+</div>
+
+  <div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-large red">
+      <i class="large mdi-navigation-menu"></i>
+    </a>
+    <ul>
+      <li><a class="btn-floating red" href="{{pathFor route = "home"}}"><i class="mdi-action-home"></i></a></li>
+      <li><a class="btn-floating  red accent-4" href="{{pathFor route = "work"}}"><i class="mdi-action-work"></i></a></li>
+      <li><a class="btn-floating red darken-4" href="{{pathFor route = "location"}}"><i class="mdi-communication-location-on"></i></a></li>
+      <li><a class="btn-floating  red lighten-1" href="{{pathFor route = "contact"}}"><i class="mdi-communication-phone"></i></a></li>
+    </ul>
+  </div>
+
+
+
+</template>
